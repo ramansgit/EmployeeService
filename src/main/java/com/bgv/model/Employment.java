@@ -2,8 +2,35 @@ package com.bgv.model;
 
 import java.util.Date;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+@DynamoDBDocument
+@JsonInclude(Include.NON_NULL)
 public class Employment {
-
+	public Employment() {
+		
+	}
+	public Employment(boolean isFresher, String companyName, Address companyAddress, String employeementType,
+			String designation, Date dateOfJoining, Date dateOfReleiving, String employeeId, String modeOfSeperation,
+			String comments, boolean isPresentEmployment, String lastSalaryPerAnnum, Person reportingManager,
+			Person humarResoureManager) {
+		super();
+		this.isFresher = isFresher;
+		this.companyName = companyName;
+		this.companyAddress = companyAddress;
+		this.employeementType = employeementType;
+		this.designation = designation;
+		this.dateOfJoining = dateOfJoining;
+		this.dateOfReleiving = dateOfReleiving;
+		this.employeeId = employeeId;
+		this.modeOfSeperation = modeOfSeperation;
+		this.comments = comments;
+		this.isPresentEmployment = isPresentEmployment;
+		this.lastSalaryPerAnnum = lastSalaryPerAnnum;
+		this.reportingManager = reportingManager;
+		this.humarResoureManager = humarResoureManager;
+	}
 	private boolean isFresher;
 	private String companyName;
 	private Address companyAddress;
