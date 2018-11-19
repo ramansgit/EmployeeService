@@ -1,7 +1,23 @@
 package com.bgv.model;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@DynamoDBDocument
+@JsonInclude(Include.NON_NULL)
 public class Reference {
 
+	public Reference() {
+		
+	}
+	public Reference(String name, String designation, String companyName, String emailId) {
+		super();
+		this.name = name;
+		this.designation = designation;
+		this.companyName = companyName;
+		this.emailId = emailId;
+	}
 	private String name;
 	private String designation;
 	private String companyName;
