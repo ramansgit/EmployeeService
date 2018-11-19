@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serverless.db.EmployeeDao;
 
 
-public class CreateProfileHandler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
+public class SaveForLaterProfileHandler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
 
 	private final Logger logger = Logger.getLogger(this.getClass());
 
